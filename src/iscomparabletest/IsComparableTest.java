@@ -48,7 +48,7 @@ public class IsComparableTest {
             System.out.println("they are different.");
         }
         
-        //sorting
+        //sorting (COMMIT TEST)
         Arrays.sort(tweetArray);
     }
     
