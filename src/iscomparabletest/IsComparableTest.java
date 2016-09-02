@@ -8,6 +8,9 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.Collections;
+import java.util.List;
+
 
 /**
  *
@@ -38,18 +41,28 @@ public class IsComparableTest {
         tweetArray[0] = tweet;
         tweetArray[1] = otherTweet;
         
-        System.out.println(tweet.getBody() + " - " + tweet.getDate().toString());
+        
+        System.out.println("Tweets before sorting:");
+        System.out.println(tweetArray[0].getBody() + " - " + tweetArray[0].getDate().toString());
         System.out.println("---");
-        System.out.println(otherTweet.getBody() + " - " + otherTweet.getDate().toString());
+        System.out.println(tweetArray[1].getBody() + " - " + tweetArray[1].getDate().toString());
         
-        //start comparing
-        if (tweet != otherTweet) 
-        {
-            System.out.println("they are different.");
-        }
+        //reversing array (very n00b way)
+        tweets tempTweet = tweetArray[0];
+        tweetArray[0] = tweetArray[1];
+        tweetArray[1] = tempTweet;
         
-        //sorting (COMMIT TEST)
+        //sorting
         Arrays.sort(tweetArray);
+        
+        System.out.println();
+        System.out.println();
+        System.out.println("Tweets after sorting:");
+        System.out.println(tweetArray[0].getBody() + " - " + tweetArray[0].getDate().toString());
+        System.out.println("---");
+        System.out.println(tweetArray[1].getBody() + " - " + tweetArray[1].getDate().toString());
+        
+        
     }
     
 }

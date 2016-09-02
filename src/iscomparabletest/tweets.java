@@ -9,7 +9,7 @@ import java.util.Date;
  *
  * @author Gaetano
  */
-public class tweets {
+public class tweets implements Comparable{
     private String mBody;
     private Date mDate;
     
@@ -26,4 +26,18 @@ public class tweets {
     public Date getDate(){
         return mDate;
     }
+    
+    @Override
+    public int compareTo(Object obj)
+    {
+        tweets other = null;
+        other = (tweets)obj;
+        
+        //
+        if (equals(other))
+        {
+            return 0;
+        }
+       return mDate.compareTo(other.mDate);
+}
 }
