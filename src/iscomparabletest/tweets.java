@@ -5,11 +5,12 @@
  */
 package iscomparabletest;
 import java.util.Date;
+import java.io.*;
 /**
  *
  * @author Gaetano
  */
-public class tweets implements Comparable{
+public class tweets implements Comparable, Serializable{
     private String mBody;
     private Date mDate;
     
@@ -40,4 +41,6 @@ public class tweets implements Comparable{
         }
        return mDate.compareTo(other.mDate);
 }
+    
 }
+

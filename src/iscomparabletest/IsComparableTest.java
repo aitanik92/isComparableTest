@@ -62,6 +62,11 @@ public class IsComparableTest {
         System.out.println("---");
         System.out.println(tweetArray[1].getBody() + " - " + tweetArray[1].getDate().toString());
         
+        //serializing and saving class to disk (tweets.dat)
+        IOHelper.save(tweetArray);
+        
+        //trying to reload from disk
+        tweetArray = IOHelper.load();
         
     }
     
