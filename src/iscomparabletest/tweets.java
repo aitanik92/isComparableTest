@@ -10,7 +10,7 @@ import java.io.*;
  *
  * @author Gaetano
  */
-public class tweets implements Comparable, Serializable{
+public class tweets implements Comparable<tweets>, Serializable{
     private String mBody;
     private Date mDate;
     
@@ -29,11 +29,8 @@ public class tweets implements Comparable, Serializable{
     }
     
     @Override
-    public int compareTo(Object obj)
-    {
-        tweets other = null;
-        other = (tweets)obj;
-        
+    public int compareTo(tweets other)
+    {        
         //
         if (equals(other))
         {
